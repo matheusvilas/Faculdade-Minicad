@@ -7,7 +7,7 @@
 </head>
 <?php
 if (!extension_loaded('gd') || !function_exists('gd_info')) {
-    die('Instalacao de PHP quebrada');
+   // die('Instalacao de PHP quebrada');
 }
 ?>
 <body>
