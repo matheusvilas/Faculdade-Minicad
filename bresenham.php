@@ -21,6 +21,8 @@
            $ptsY[] = (int)$y;
            $x1 += ($sx * 1);
         }
-        grafica($ptsY, $ptsX, 'Algoritmo de Bresenham');
+        // print_r($ptsX);
+        // print_r($ptsY);
+       grafica($ptsY, $ptsX, 'Algoritmo de Bresenham');
     }
 ?>

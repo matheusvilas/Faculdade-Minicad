@@ -1,12 +1,47 @@
-body {
-	font-family:"Lucida Console", Monaco, monospace;
+.container-deus {
+	display: flex;
+}
+.sidebar-menu {
+	height: 100vh;
+	background: black;
+	width: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 
-input.boton {
-	color:#333;
-	background-color:#CCC;
-	border:1px solid;
-	border-color: #666;
-	font-family:"Lucida Console", Monaco, monospace;
-	font-size:14px;
+.sidebar-menu-itens {
+	
+	
+
+}	
+.sidebar-menu .sidebar-menu-itens {
+	color: white;
+	font-size: 30px;
+	font-family: 'Arial';
+	text-transform: uppercase;
+	text-align: center;
+	
+}
+
+.sidebar-menu .sidebar-menu-itens li {
+	margin-bottom: 50px;
+	
+}
+
+.sidebar-menu-itens-principal{
+	color: yellow !important;
+	
+}
+
+.sidebar-menu .sidebar-menu-itens li a {
+	text-decoration: none;
+	color: white;
+}
+.sidebar-menu-itens-clean{
+	color: red!important;
+}
+.input{
+	
 }
