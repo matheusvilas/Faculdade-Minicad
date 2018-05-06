@@ -18,7 +18,7 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
         <nav class="sidebar-menu">
             <ul class="sidebar-menu-itens">
                 <li>    
-                    <a class="sidebar-menu-itens-principal" href="">Minicad</a> 
+                    <a class="sidebar-menu-itens-principal" href="#">Minicad</a> 
                 </li>
                 <li>
                     <a class="chamaGrafico">Quadrado</a>   
