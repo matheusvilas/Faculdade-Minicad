@@ -21,39 +21,44 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
                     <a class="sidebar-menu-itens-principal" href="">Minicad</a> 
                 </li>
                 <li>
-                    <a href="">Quadrado</a>   
+                    <a class="chamaGrafico">Quadrado</a>   
                 </li>
                 <li>
-                    <a href="">Triangulo</a>
+                    <a class="chamaGrafico">Triangulo</a>
                 </li>
                 <li>
-                    <a href="">Círculo</a> 
+                    <a class="chamaGrafico">Círculo</a> 
                 </li>
                 <li>
                     <a class="sidebar-menu-itens-clean" href="">Limpar</a> 
                 </li>
             </ul>
         </nav>
-        <div class="input">
-            <form method="post" action="bresenham.php" target="bresenham">
-                x1:
-                <input type="text" name="x1"/>
-                <br>
-                y1:
-                <input type="text" name="y1"/>
-                <br>
-                x2:
-                <input type="text" name="x2"/>
-                <br>
-                y2:
-                <input type="text" name="y2"/>
-                <p></p>
-                <input type="submit" value="Montar" />
-            </form>
+        <div class="input-father">
+           <div class="input">
+                <form method="post" action="bresenham.php" target="bresenham">
+                        <label class="tituloChamado"></label>
+                        <br>
+                        x1:
+                        <input type="text" name="x1"/>
+                        <br>
+                        y1:
+                        <input type="text" name="y1"/>
+                        <br>
+                        x2:
+                        <input type="text" name="x2"/>
+                        <br>
+                        y2:
+                        <input type="text" name="y2"/>
+                        <p></p>
+                        <input type="submit" value="Montar" />
+                    </form>
+           </div>
         </div>
-    </div>
-
-
+        <div class="grafico">
+            <iframe src="bresenham.php" width="100%" height="100%" frameborder="0" name="bresenham" scrolling="no" align="middle"></iframe>
+        </div>
+    </div>  
 
 
 
@@ -79,7 +84,7 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
             </td>
             <td width="600">
                 <div name="bresenham">
-                    <iframe src="bresenham.php" width="100%" frameborder="0" name="bresenham" height="600px" scrolling="no" align="middle"></iframe>
+                    
                 </div>
             </td>
         </tr>
