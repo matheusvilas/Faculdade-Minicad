@@ -51,7 +51,7 @@
 	align-items: center;
 }
 .input{
-	display: none;
+	display: hidden;
 	justify-content: center;
 	align-items: center;
 	background-color: white;
@@ -65,12 +65,26 @@
 .input form {
 	
 }
-
+#myCanvas {
+	width: 80%;
+	height: 80%;
+	border:1px solid #000000;
+}
 .grafico{
 	width: 75%;
 	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
 }
 
+#coordenadas{
+	position: absolute;
+	left: 10%;
+	bottom: 10%;
+}
 .chamaGrafico {
 	cursor: pointer;
 }

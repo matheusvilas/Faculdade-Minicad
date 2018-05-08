@@ -13,6 +13,9 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
     die('Instalacao de PHP quebrada');
 }
 ?>
+<script>
+    var click = true;
+</script>
 <body style="height: 100vh;">
     <div class="container-deus">
         <nav class="sidebar-menu">
@@ -36,87 +39,34 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
         </nav>
         <div class="input-father">
            <div class="input">
-                <form method="post" action="bresenham.php" target="bresenham">
-                        <label class="tituloChamado"></label>
-                        <br>
-                        x1:
-                        <input type="text" name="x1"/>
-                        <br>
-                        y1:
-                        <input type="text" name="y1"/>
-                        <br>
-                        x2:
-                        <input type="text" name="x2"/>
-                        <br>
-                        y2:
-                        <input type="text" name="y2"/>
-                        <p></p>
-                        <input type="submit" value="Montar" />
-                    </form>
+                <form method="post">
+                    <label class="tituloChamado"></label>
+                    <br>
+                    x1:
+                    <input type="text" name="x1" class="x1" />
+                    <br>
+                    y1:
+                    <input type="text" name="y1" class="y1"/>
+                    <br>
+                    x2:
+                    <input type="text" name="x2" class="x2"/>
+                    <br>
+                    y2:
+                    <input type="text" name="y2" class="y2"/>
+                    <p></p>
+                    <input type="button" value="Montar" class="montar"/>
+                </form>
            </div>
         </div>
         <div class="grafico">
-            <iframe src="bresenham.php" width="100%" height="100%" frameborder="0" name="bresenham" scrolling="no" align="middle"></iframe>
+            <!-- <iframe src="bresenham.php" width="100%" height="100%" frameborder="0" name="bresenham" scrolling="no" align="middle"></iframe> -->
+            <canvas id="myCanvas"></canvas>
+            <p id="coordenadas"></p>
         </div>
     </div>  
 
 
 
-    <!-- <table  border="0" cellpadding="10" align="center">
-    <tr>
-            <td width="200">
-           		<h1>Bresenham: </h1>
-           		<form method="post" action="bresenham.php" target="bresenham">
-                    x1:
-                    <input type="text" name="x1"/>
-          <br/>
-                    y1:
-                    <input type="text" name="y1"/>
-                    <br />
-                    x2:
-                    <input type="text" name="x2"/>
-                    <br />
-                    y2:
-                    <input type="text" name="y2"/>
-                    <p></p>
-                    <input type="submit" class="boton" value="Montar" />
-                </form>
-            </td>
-            <td width="600">
-                <div name="bresenham">
-                    
-                </div>
-            </td>
-        </tr>
-    </table>
-    <table width="600" border="0" cellpadding="10" align="center">
-        <tr>
-            <td width="200">
-            	<h1>DDA: </h1>
-                <form method="post" action="dda.php" target="dda">
-                    x1:
-                    <input type="text" name="x1"/>
-                    <br />
-                    y1:
-                    <input type="text" name="y1"/>
-                    <br />
-                    x2:
-                    <input type="text" name="x2"/>
-                    <br />
-                    y2:
-                    <input type="text" name="y2"/>
-                    <p></p>
-                    <input type="submit" class="boton" value="Montar" />
-                </form>
-            </td>
-            <td width="400">
-                <div name="dda">
-                    <iframe src="dda.php" width="100%" frameborder="0" name="dda" height="400px" scrolling="no" align="middle"></iframe>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <script src="bootstrap/js/bootstrap.min.js"></script> -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
