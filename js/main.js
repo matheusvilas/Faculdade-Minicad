@@ -53,12 +53,17 @@ $( document ).ready(function() {
         var x2 = $( ".input-father" ).find( '.x2');
         var y2 = $( ".input-father" ).find( '.y2');
         var ctx = canvas.getContext("2d");
-        console.log(x1.val());
-        console.log(y1.val());
-        console.log(x2.val());
-        console.log(y2.val());
         ctx.moveTo(x1.val(),y1.val());
+        ctx.lineTo(x1.val(),y2.val());
+        ctx.stroke();
+        ctx.moveTo(x1.val(),y2.val());
         ctx.lineTo(x2.val(),y2.val());
+        ctx.stroke();
+        ctx.moveTo(x2.val(),y2.val());
+        ctx.lineTo(x2.val(),y1.val());
+        ctx.stroke();
+        ctx.moveTo(x2.val(),y1.val());
+        ctx.lineTo(x1.val(),y1.val());
         ctx.stroke();
     });
 
@@ -71,7 +76,7 @@ $( document ).ready(function() {
         var rect = canvas.getBoundingClientRect();
         return {
           x: evt.clientX - rect.left,
-          y: evt.clientY - rect.top
+          y: evt.clientY -rect.top,
         };
       }
 

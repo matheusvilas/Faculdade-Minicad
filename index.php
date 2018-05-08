@@ -24,7 +24,7 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
                     <a class="sidebar-menu-itens-principal" href="#">Minicad</a> 
                 </li>
                 <li>
-                    <a class="chamaGrafico">Quadrado</a>   
+                    <a class="chamaGrafico">Retângulo</a>   
                 </li>
                 <li>
                     <a class="chamaGrafico">Triangulo</a>
@@ -60,7 +60,7 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
         </div>
         <div class="grafico">
             <!-- <iframe src="bresenham.php" width="100%" height="100%" frameborder="0" name="bresenham" scrolling="no" align="middle"></iframe> -->
-            <canvas id="myCanvas"></canvas>
+            <canvas id="myCanvas" width="800px" height="580px"></canvas>
             <p id="coordenadas"></p>
         </div>
     </div>  
