@@ -39,7 +39,7 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
         </nav>
         <div class="input-father">
            <div class="input">
-                <form method="post">
+                <form method="post" class="All">
                     <label class="tituloChamado"></label>
                     <br>
                     x1:
@@ -56,11 +56,34 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
                     <p></p>
                     <input type="button" value="Montar" class="montar"/>
                 </form>
+                <!-- <form method="post" class="triangulo">
+                    <label class="tituloChamado"></label>
+                    <br>
+                    x1:
+                    <input type="text" name="x1" class="x1" />
+                    <br>
+                    y1:
+                    <input type="text" name="y1" class="y1"/>
+                    <br>
+                    x2:
+                    <input type="text" name="x2" class="x2"/>
+                    <br>
+                    y2:
+                    <input type="text" name="y2" class="y2"/>
+                    <br>
+                    x3:
+                    <input type="text" name="x3" class="x3"/>
+                    <br>
+                    y3:
+                    <input type="text" name="y3" class="y3"/>
+                    <p></p>
+                    <input type="button" value="Montar" class="montar"/>
+                </form> -->
            </div>
         </div>
         <div class="grafico">
             <!-- <iframe src="bresenham.php" width="100%" height="100%" frameborder="0" name="bresenham" scrolling="no" align="middle"></iframe> -->
-            <canvas id="myCanvas" width="800px" height="580px"></canvas>
+            <canvas id="myCanvas" width="800px" height="600px"></canvas>
             <p id="coordenadas"></p>
         </div>
     </div>  

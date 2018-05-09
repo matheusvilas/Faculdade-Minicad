@@ -13,6 +13,7 @@ $( document ).ready(function() {
         var txt = $(input).find('.tituloChamado');
         input.show().css('display', 'inline-flex');
         txt.html(name);
+
     });
 
     /**
