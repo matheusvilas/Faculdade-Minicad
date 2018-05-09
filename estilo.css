@@ -62,9 +62,14 @@
 	margin-left: 10px;
 }
 
-.input form {
-	
+.input-father {
+	display: none !important;
 }
+
+.input-father-triangulo {
+	display: none;
+}
+
 #myCanvas {
 	border:1px solid #000000;
 }

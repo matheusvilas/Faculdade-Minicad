@@ -9,13 +9,12 @@ $( document ).ready(function() {
 
     $('.chamaGrafico').click(function(){
         var name = $(this).text();
-        var input = $( ".input-father" ).find( '.input');
+        var input = $( ".input-father" ).find( '.input').find('.all');
         var txt = $(input).find('.tituloChamado');
+        console.log(name, input, txt);
         input.show().css('display', 'inline-flex');
         txt.html(name);
-
     });
-
     /**
      * 
      * MOUSE CLICK FUCNTION SAVE IN DOM
