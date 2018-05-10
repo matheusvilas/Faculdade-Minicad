@@ -51,7 +51,6 @@ $( document ).ready(function() {
     
     //
     canvas.addEventListener("keyup", function(event) {
-       
         event.preventDefault();
         if (event.keyCode === 13) {
             alert('eaeae');
@@ -64,12 +63,19 @@ $( document ).ready(function() {
             $('a').removeClass('clicked');
          });
     }
+
     $('a').click(function(){
         limparA();
         $(this).toggleClass('clicked');
     });
     
-    
+    $('.TESTE').click(function(){
+        var x1 = $( ".input-father" ).find( '.x1');
+        var y1 = $( ".input-father" ).find( '.y1');
+        var x2 = $( ".input-father" ).find( '.x2');
+        var y2 = $( ".input-father" ).find( '.y2');
+        console.log(retornaLinha(x1,y1,x2,y2));
+    });
     
     $('.montar').click(function(){
         var canvas = document.getElementById("myCanvas");
