@@ -46,12 +46,13 @@
 	color: red!important;
 }
 .input-father{
-	display: flex;
+	min-width: 400px;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 }
 .input{
-	display: hidden;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	background-color: white;
@@ -59,22 +60,20 @@
 	-moz-box-shadow: 0px 0px 5px 2px rgba(148,148,148,1);
 	box-shadow: 0px 0px 5px 2px rgba(148,148,148,1);
 	padding: 10px;
-	margin-left: 10px;
+	
 }
 
-.input-father {
-	display: none !important;
-}
-
-.input-father-triangulo {
-	display: none;
+.tituloChamado {
+	text-align: center;
+	font-size: 2em;
+	margin-bottom: 0;
 }
 
 #myCanvas {
 	border:1px solid #000000;
 }
 .grafico{
-	width: 75%;
+	
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -83,11 +82,28 @@
 
 }
 
+.grafico .grafico-filho{
+	position: relative;
+}
+
 #coordenadas{
 	position: absolute;
-	left: 10%;
 	bottom: 0;
+	margin-bottom: 0;
+	margin-left: 5px;
 }
 .chamaGrafico {
 	cursor: pointer;
+}
+
+#x {
+	color: red;
+}
+
+#y {
+	color: blue;
+}
+
+.xy3{
+	display: none;
 }

@@ -32,7 +32,7 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
                         <a class="chamaGrafico retangulo">Retângulo</a>
                     </li>
                     <li>
-                        <a class="chamaGrafico triangulo">Triangulo</a>
+                        <a class="chamaGrafico triangulo">Triângulo</a>
                     </li>
                     <li>
                         <a class="chamaGrafico circulo">Círculo</a>
@@ -44,45 +44,35 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
             </nav>
             <div class="input-father">
                 <div class="input">
-                    <form method="post" class="all">
-                        <label class="tituloChamado"></label>
+                    <form method="post">
+                        <p class="tituloChamado"></p>
                         <br> x1:
                         <input type="text" name="x1" class="x1" />
                         <br> y1:
                         <input type="text" name="y1" class="y1" />
-                        <br> x2:
-                        <input type="text" name="x2" class="x2" />
-                        <br> y2:
-                        <input type="text" name="y2" class="y2" />
-                        <p></p>
-                        <input type="button" value="Montar" class="montar" />
-                    </form>
-                </div>
-            </div>
-            <div class="input-father-triangulo">
-                <div class="input">
-                    <form method="post" class="triangulo">
-                        <label class="tituloChamado"></label>
-                        <br> x1:
-                        <input type="text" name="x1" class="x1" />
-                        <br> y1:
-                        <input type="text" name="y1" class="y1" />
-                        <br> x2:
-                        <input type="text" name="x2" class="x2" />
-                        <br> y2:
-                        <input type="text" name="y2" class="y2" />
-                        <br> x3:
-                        <input type="text" name="x3" class="x3" />
-                        <br> y3:
-                        <input type="text" name="y3" class="y3" />
+                       <div>
+                            <br> x2:
+                            <input type="text" name="x2" class="x2" />
+                            <br> y2:
+                            <input type="text" name="y2" class="y2" />
+                       </div>
+                        <div class="xy3">
+                            <br> x3:
+                            <input type="text" name="x3" class="x3" />
+                            <br> y3:
+                            <input type="text" name="y3" class="y3" />
+                        </div>
                         <p></p>
                         <input type="button" value="Montar" class="montar" />
                     </form>
                 </div>
             </div>
             <div class="grafico">
-                <canvas id="myCanvas" width="800px" height="600px"></canvas>
-                <p id="coordenadas"></p>
+               <div class="grafico-filho">
+                <p id="coordenadas"><span id="x"></span><span id="y"></span></p>
+                    <canvas id="myCanvas" width="800px" height="600px"> 
+                    </canvas>
+               </div>
             </div>
         </div>
 
@@ -91,7 +81,6 @@ if (!extension_loaded('gd') || !function_exists('gd_info')) {
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/menu.js"></script>
     </body>
 
 </html>
