@@ -42,6 +42,16 @@
 	text-decoration: none;
 	color: white;
 }
+
+.sidebar-menu .sidebar-menu-itens li a:hover {
+	text-decoration: none;
+	color: blue;
+}
+
+.clicked {
+	color: blue!important;
+}
+
 .sidebar-menu-itens-clean{
 	color: red!important;
 }

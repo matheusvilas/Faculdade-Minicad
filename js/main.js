@@ -58,6 +58,16 @@ $( document ).ready(function() {
             $('.montar').click();
         }
     });   
+
+    function limparA(){
+         $('.clicked').each(function(){
+            $('a').removeClass('clicked');
+         });
+    }
+    $('a').click(function(){
+        limparA();
+        $(this).toggleClass('clicked');
+    });
     
     
     
@@ -148,7 +158,9 @@ $( document ).ready(function() {
     
     function montaCirculo(x1 , y1 , x2 , y2){
         context.beginPath();
-        context.arc(100, 75, 50, 0, 2 * Math.PI);
+        context.arc(x1, y1, 50, 0, 2 * Math.PI);
+        context.stroke();
+        
     }   
     
 });
