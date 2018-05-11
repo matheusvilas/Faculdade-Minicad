@@ -74,7 +74,7 @@ $( document ).ready(function() {
         var y1 = $( ".input-father" ).find( '.y1');
         var x2 = $( ".input-father" ).find( '.x2');
         var y2 = $( ".input-father" ).find( '.y2');
-        console.log(retornaLinha(x1,y1,x2,y2));
+        console.log(retornaLinha(x1.val(),y1.val(),x2.val(),y2.val()));
     });
     
     $('.montar').click(function(){
@@ -130,6 +130,23 @@ $( document ).ready(function() {
     }, false);
     
     function montaReta(x1 , y1 , x2 , y2){
+        all = retornaLinha(x1.val(),y1.val(),x2.val(),y2.val());
+        // var red = 255;
+        // var green = 0;
+        // var blue = 0;
+        // var i;
+        for (i = 0; i < all[0].length; i++) { 
+            // var pxData = context.getImageData(x, y, 1, 1);
+            // pxData.data[0] = red;
+            // pxData.data[1] = green;
+            // pxData.data[2] = blue;
+            // pxData.data[3] = 255;
+            context.moveTo(all[0][i] , all[1][i]);
+            context.lineTo(all[0][i] + 1 , all[1][i] + 1);
+            context.stroke();
+
+
+        }
         context.moveTo(x1.val(),y1.val());
         context.lineTo(x2.val(),y2.val());
         context.stroke();
