@@ -10,75 +10,78 @@
 
 </head>
 
-    <script>
-        var click = true;
-    </script>
+<script>
+    var click = 1;
+</script>
 
-    <body style="height: 100vh;">
-        <div class="container-deus">
-            <nav class="sidebar-menu">
-                <ul class="sidebar-menu-itens">
-                    <li>
-                        <a class="sidebar-menu-itens-principal">Minicad</a>
-                    </li>
-                    <li>
-                        <a class="chamaGrafico reta">Reta</a>
-                    </li>
-                    <li>
-                        <a class="chamaGrafico retangulo">Retângulo</a>
-                    </li>
-                    <li>
-                        <a class="chamaGrafico triangulo">Triângulo</a>
-                    </li>
-                    <li>
-                        <a class="chamaGrafico circulo">Círculo</a>
-                    </li>
+<body style="height: 100vh;">
+    <div class="container-deus">
+        <nav class="sidebar-menu">
+            <ul class="sidebar-menu-itens">
+                <li>
+                    <span class="sidebar-menu-itens-principal">Minicad</span>
+                </li>
+                <li>
+                    <a class="chamaGrafico reta">Reta</a>
+                </li>
+                <li>
+                    <a class="chamaGrafico retangulo">Retângulo</a>
+                </li>
+                <li>
+                    <a class="chamaGrafico triangulo">Triângulo</a>
+                </li>
+                <li>
+                    <a class="chamaGrafico circulo">Círculo</a>
+                </li>
 
-                    <li>
-                        <a class="sidebar-menu-itens-clean" href="">Limpar</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="input-father">
-                <div class="input">
-                    <form method="post">
-                        <p class="tituloChamado"></p>
-                        <br> x1:
-                        <input type="text" name="x1" class="x1" />
-                        <br> y1:
-                        <input type="text" name="y1" class="y1" />
-                       <div>
-                            <br> x2:
-                            <input type="text" name="x2" class="x2" />
-                            <br> y2:
-                            <input type="text" name="y2" class="y2" />
-                       </div>
-                        <div class="xy3">
-                            <br> x3:
-                            <input type="text" name="x3" class="x3" />
-                            <br> y3:
-                            <input type="text" name="y3" class="y3" />
-                        </div>
-                        <p></p>
-                        <input type="button" value="Montar" class="montar" />
-                    </form>
-                </div>
-            </div>
-            <div class="grafico">
-               <div class="grafico-filho">
-                <p id="coordenadas"><span id="x"></span><span id="y"></span></p>
-                    <canvas id="myCanvas" width="800px" height="600px"> 
-                    </canvas>
-               </div>
+                <li>
+                    <a class="sidebar-menu-itens-clean" href="">Limpar</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="input-father">
+            <div class="input">
+                <form method="post">
+                    <p class="tituloChamado"></p>
+                    <br> x1:
+                    <input type="text" name="x1" class="x1" />
+                    <br> y1:
+                    <input type="text" name="y1" class="y1" />
+                    <div>
+                        <br> x2:
+                        <input type="text" name="x2" class="x2" />
+                        <br> y2:
+                        <input type="text" name="y2" class="y2" />
+                    </div>
+                    <div class="xy3">
+                        <br> x3:
+                        <input type="text" name="x3" class="x3" />
+                        <br> y3:
+                        <input type="text" name="y3" class="y3" />
+                    </div>
+                    <p></p>
+                    <input type="button" value="Montar" class="montar" />
+                </form>
             </div>
         </div>
+        <div class="grafico">
+            <div class="grafico-filho">
+                <p id="coordenadas">
+                    <span id="x"></span>
+                    <span id="y"></span>
+                </p>
+                <canvas id="myCanvas" width="800px" height="600px">
+                </canvas>
+            </div>
+        </div>
+    </div>
 
 
 
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/menu.js"></script>
-    </body>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
 
 </html>

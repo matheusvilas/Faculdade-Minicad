@@ -10,6 +10,8 @@ $( document ).ready(function() {
     var y1 = $( ".input-father" ).find( '.y1');
     var x2 = $( ".input-father" ).find( '.x2');
     var y2 = $( ".input-father" ).find( '.y2');
+    var x3 = $( ".input-father" ).find( '.x3');
+    var y3 = $( ".input-father" ).find( '.y3');
     
     $('.chamaGrafico').click(function(){
         var name = $(this).text();
@@ -27,20 +29,55 @@ $( document ).ready(function() {
         var mousePos = getMousePos(this, evt);
         x = Math.round(mousePos.x);
         y = Math.round(mousePos.y);
-        (click)?ponto1(x , y):ponto2(x , y);
+
+        if($('.tituloChamado').text() == 'Triângulo'){
+            switch (click) {
+                case 1:
+                ponto1(x , y);
+                click += 1;
+                break;
+
+                case 2:
+                ponto2(x , y);
+                click += 1;                
+                break;
+            
+                case 3:
+                ponto3(x , y);
+                click = 1;
+                break;
+                default:
+                    break;
+            }
+        } else {
+            switch (click) {
+                case 1:
+                ponto1(x , y);
+                click += 1;
+                break;
+
+                case 2:
+                ponto2(x , y);
+                click = 1;                
+                break;
+            }
+        }
     });
     
     function ponto1(x , y){
         x1.val(x);
         y1.val(y);
-        click = false;
     }
     
     
     function ponto2(x , y){
         x2.val(x);
         y2.val(y);
-        click = true;
+    }
+
+    function ponto3(x , y){
+        x3.val(x);
+        y3.val(y);
     }
     
     /**
@@ -99,8 +136,7 @@ $( document ).ready(function() {
             montaTriangulo(x1 , y1 , x2 , y2, x3 , y3);    
             break;
             case 'Círculo':
-            montaCirculo(x1 , y1 , x2 , y2);
-            
+            montaCirculo(x1 , y1 , x2, y2);
             break;
             default:
         }
@@ -130,23 +166,6 @@ $( document ).ready(function() {
     }, false);
     
     function montaReta(x1 , y1 , x2 , y2){
-        all = retornaLinha(x1.val(),y1.val(),x2.val(),y2.val());
-        // var red = 255;
-        // var green = 0;
-        // var blue = 0;
-        // var i;
-        for (i = 0; i < all[0].length; i++) { 
-            // var pxData = context.getImageData(x, y, 1, 1);
-            // pxData.data[0] = red;
-            // pxData.data[1] = green;
-            // pxData.data[2] = blue;
-            // pxData.data[3] = 255;
-            context.moveTo(all[0][i] , all[1][i]);
-            context.lineTo(all[0][i] + 1 , all[1][i] + 1);
-            context.stroke();
-
-
-        }
         context.moveTo(x1.val(),y1.val());
         context.lineTo(x2.val(),y2.val());
         context.stroke();
@@ -179,10 +198,15 @@ $( document ).ready(function() {
         context.stroke();
     }
     
-    function montaCirculo(x1 , y1 , x2 , y2){
+    function montaCirculo(x1 , y1 , x2, y2){
         context.beginPath();
-        context.arc(x1, y1, 50, 0, 2 * Math.PI);
+        a = x1.val() - x2.val();
+        b = y1.val() - y2.val();
+        var raio = Math.sqrt( a*a + b*b );
+        // if(raio <  0){raio *= -1};
+        context.arc(x1.val(), y1.val() , raio , 0, 2 * Math.PI);
         context.stroke();
+        
         
     }   
     
